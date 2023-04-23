@@ -1,51 +1,46 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, Button, TextInput, SafeAreaView, View,Dimensions } from 'react-native';
+import { StyleSheet, Text, Button, TextInput, SafeAreaView, Dimensions } from 'react-native';
 import {LineChart} from 'react-native-chart-kit';
 
 export default function App() {
 
-  let [input1, setInputData1] = useState("");
+  let [input1, setInputData1] = useState(""); // [variable, function to set value of variable] and initial value of variable in ()
   let [input2, setInputData2] = useState(0);
 
   let [arr1 , setArr1] = useState([""]);
   let [arr2 , setArr2] = useState([0]);
 
-  let [setter, setSetter] = useState(false);
+  let [flag, setFlag] = useState(false);
   
   console.log(arr1);
   console.log(arr2);
 
-  var arrx = ["", "", "", "", ""];
-  var arry = [0, 0, 0, 0, 0];
+  var x = [""]; // used to display initial empty graph
+  var y = [0];
 
-  var x1 = arrx[0], x2 = arrx[1], x3 = arrx[2], x4 = arrx[3], x5 = arrx[4];
-  var y1 = arry[0], y2 = arry[1], y3 = arry[2], y4 = arry[3], y5 = arry[4];
+  var arrx = ["", "", "", "", "", "", ""]; // array with values which are replaced by user input
+  var arry = [0, 0, 0, 0, 0, 0, 0];
 
   const Update = (arr1, arr2) => {
 
-    x1 = arr1[0];
-    x2 = arr1[1];
-    x3 = arr1[2];
-    x4 = arr1[3];
-    x5 = arr1[4];
-    y1 = arr2[0];
-    y2 = arr2[1];
-    y3 = arr2[2];
-    y4 = arr2[3];
-    y5 = arr2[4];
+    for (let i = 0; i < arr1.length; i++)
+    {
+      arrx[i] = arr1[i]; // arrx is graphed using values in user input arr1
+      arry[i] = arr2[i];
+    }
   
     var list = {
     
-      labels: [x1, x2, x3, x4, x5],
+      labels: arrx,
       datasets: [
         {
-          data: [y1, y2, y3, y4, y5]
+          data: arry
         }
       ],
     
     };
   
-    return list;
+    return list; // dataset (y axis) and labels (x axis) for graph
   
   };
 
@@ -59,7 +54,7 @@ export default function App() {
           onChangeText={item => setInputData1(item.toString()) }
           style={styleSheet.textInput} />
 
-      <Button onPress={() => setArr1((arr1) => [...arr1, input1.toString()])}
+      <Button onPress={() => setArr1((arr1) => [...arr1, input1.toString()])} // the function adds the input value to the end of the existing array
          title={'save'} />
  
 
@@ -88,7 +83,7 @@ export default function App() {
         
         </Text>
 
-      <Button onPress={() => setSetter(true)}
+      <Button onPress={() => setFlag(true)} // flag is set to true once graph arrays are updated from the update function
          title={'graph'} />
       
 
@@ -97,16 +92,16 @@ export default function App() {
         </Text>
 
     <LineChart
-    data={setter ? Update(arr1, arr2) : {
+    data={flag ? Update(arr1, arr2) : {
   
-      labels: [x1, x2, x3, x4, x5],
+      labels: x,
       datasets: [
         {
-          data: [y1, y2, y3, y4, y5]
+          data: y
         }
       ],
     
-    }}
+    }} // if flag is true, then the graph arrays are used as the graph data otherwise the initial empty arrays are used
     width={Dimensions.get("window").width} // from react-native
     height={220}
     yAxisLabel=""
