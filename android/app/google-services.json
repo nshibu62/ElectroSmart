@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "257217555270",
+    "project_id": "electrosmart-2a93a",
+    "storage_bucket": "electrosmart-2a93a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257217555270:android:998eea8cd1065e1f855347",
+        "android_client_info": {
+          "package_name": "com.awesomeproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257217555270-3fer0ui6bqmbdq2hl6q3dpqt5dfuf1ld.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.awesomeproject",
+            "certificate_hash": "09a83ebdc762fc3bd5ca3721c7da3c0dce9eb58e"
+          }
+        },
+        {
+          "client_id": "257217555270-trforpa9m4i1b9241f8plv075h39ugq8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.awesomeproject",
+            "certificate_hash": "781af3551eff6537ca082e2a6fa774ef81fcc7e7"
+          }
+        },
+        {
+          "client_id": "257217555270-94h596d7susj4qnpg8eienhjefieoilr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsrvRu2Px_GGzaVF8hj55DTNStZKau7mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257217555270-3dla4pavcc38jthj80t8qj9414o5j5cr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
