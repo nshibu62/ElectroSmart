@@ -2,7 +2,7 @@
 
 This energy conservation app allows users to track electricity consumption with usage statistics and graphs based on overall usage and specific appliance usage. The app also displays useful tips to lower usage and sends notifications to unplug appliances/devices in stand-by mode.
 
-## [UI Design](https://www.figma.com/proto/BIFzFsL4TZoomxV9MR79Pr/UI-Design?type=design&node-id=1-3&t=jGc8OOiYP1rwa8Pn-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3)
+## [UI Design](https://www.figma.com/file/BIFzFsL4TZoomxV9MR79Pr/UI-Design?type=design&node-id=0%3A1&mode=design&t=hwNYy8QMuR2C0tOA-1)
 
 ## Demo
 
